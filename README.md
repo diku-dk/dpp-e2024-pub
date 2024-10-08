@@ -2,6 +2,8 @@
 
 ## Course Structure
 
+<img align="right" width="300" src="https://github.com/user-attachments/assets/d377dc77-3495-4b40-9464-d314b0fee8e2">
+
 DPP is structured around five weeks with lectures and lab sessions
 on Monday and Wednesday, followed by a final project to be
 presented orally at the exam.  Throughout the course, you will hand in
@@ -30,6 +32,8 @@ course - you will be assigned reading material from papers and such.
 * Monday    13:00 - 15:00 in Lille UP-1 at DIKU
 * Wednesday 10:00 - 12:00 in Lille UP-1 at DIKU
 
+<img align="left" width="300" src="https://github.com/user-attachments/assets/31e64447-eb76-4749-928c-5be09bf37bd2">
+
 ### Labs:
 
 * Monday 15:00 - 17:00 in 3-0-25 at DIKU.
@@ -49,6 +53,8 @@ up to the lab sessions.
 TBA
 
 ## Weekly assignments
+
+<img align="right" width="300" src="https://github.com/user-attachments/assets/720668fd-cde1-4000-8729-72771f5b09b9">
 
 The weekly assignments are **mandatory**, must be solved
 **individually**, and make up 40% of your final grade.  Submission is

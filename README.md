@@ -166,4 +166,4 @@ noted, but they contain useful and interesting background information.
 
 NVIDIA has donated GPUs used for teaching DPP for several years.
 
-Thanks to Filippa Bill for the hedgehogs.
+Thanks to Filippa Biil for the hedgehogs.

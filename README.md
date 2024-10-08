@@ -161,3 +161,9 @@ noted, but they contain useful and interesting background information.
   Systems](https://htor.inf.ethz.ch/publications/img/hoefler-scientific-benchmarking.pdf)
   (we benchmark much simpler systems and don't expect anywhere near
   this much detail, but it's useful to have thought about it)
+
+## Acknowledgements
+
+NVIDIA has donated GPUs used for teaching DPP for several years.
+
+Thanks to Filippa Bill for the hedgehogs.

@@ -60,12 +60,24 @@ The weekly assignments are **mandatory**, must be solved
 **individually**, and make up 40% of your final grade.  Submission is
 on Absalon.
 
-You will receive feedback a week after the handin deadline (at the
-latest).  You then have another week to prepare a resubmission.  That
-is, **the resubmission deadline is two weeks after the original handin
-deadline**.
-
 The assignment text and handouts will be linked in the schedule above.
+
+#### Feedback and resubmission
+
+[Your TA, Anders](#TA), will be grading and providing feedback on your
+weekly assignments. You receive feedback within a week of the handin
+deadline, and one resubmission attempt is granted for each weekly
+assignment, which may be used to solve tasks missing in the original
+hand-in and/or to improve on the existing hand-in (but note that
+feedback may be sparse for resubmissions).
+
+As a rule of thumb, the resubmission deadline is **two weeks from the
+original handin deadline**, but it is *negotiable*.
+
+Extensions may be granted on weekly assignment (re-)submission
+deadlines -- please ask [Anders](#TA) if for any reason, personal or
+otherwise, you need an extension (no need to involve Cosmin or Troels
+unless you wish to complain about Anders' decision).
 
 ## Group project and exam
 
@@ -91,6 +103,32 @@ group will answer individual questions for about 10 min.
 
 ## Practical information
 
+### TA
+Your TA is **Anders Holst**
+([lietzen@di.ku.dk](mailto:lietzen@di.ku.dk), Discord: `sortraev`).
+Anders will be grading your weekly assignments and patrolling the
+online discussion forum(s) (with help from Troels).
+
+### Discussion forum(s) + course Discord link
+
+We provide a Discord channel for discussions, invite here:
+[discord.gg/2wPBbAYT9G](https://discord.gg/2wPBbAYT9G) (please contact
+Anders should the link expire), and advice that you join as soon as
+possible.
+
+We encourage active discussion of course subjects with fellow
+students, so long as you refrain from directly discussing or sharing
+solutions to weekly assignments and the exam/group project. Should you
+have questions pertaining to your particular solution, please ask them
+in a private message to Anders (your TA), who may refer you to Troels.
+
+Please note that while we prefer Discord for communication, you are
+free to use the Absalon discussion forum and private messaging system,
+and that no announcement shall be posted to Discord which has not
+already been posted to Absalon.
+
+### Hendrix GPU cluster
+
 You may find it useful to make use of DIKUs GPU machines in your work.
 We recommend using the so-called [Hendrix
 cluster](https://diku-dk.github.io/wiki/slurm-cluster#getting-access).
@@ -110,26 +148,26 @@ $ sshfs hendrix:/ remote
 [Also see here for more
 hints.](https://github.com/diku-dk/howto/blob/main/servers.md#the-hendrix-cluster)
 
-### Using Hendrix
+#### Using Hendrix
 
 The DIKU systems have a [conventional HPC modules
 setup](https://hpc-wiki.info/hpc/Modules), meaning you can make
 additional software available with the ``module`` command. You may
 need to do this inside SLURM jobs.
 
-#### Loading CUDA
+##### Loading CUDA
 
 ```bash
 $ module load cuda
 ```
 
-#### Loading Futhark
+##### Loading Futhark
 
 ```bash
 $ module load futhark
 ```
 
-#### Loading ISPC
+##### Loading ISPC
 
 ```bash
 $ module load ispc

@@ -50,7 +50,29 @@ up to the lab sessions.
 
 ### Lecture plan
 
-TBA
+#### Week 1
+
+##### Monday
+
+* **Theme**: Intro, deterministic parallelism, data parallelism, Futhark.
+
+* **Material**: [Parallel Programming in Futhark](https://futhark-book.readthedocs.io/en/latest/)
+
+* **Lab**: [Futhark exercises](bootstrap-exercises.md).
+
+##### Wednesday
+
+* **Theme**: Cost models, advanced Futhark.
+
+* **Material**:
+
+  * [Guy Blelloch: Programming Parallel Algorithms](material/week1/blelloch-programming-parallel-algorithms.pdf)
+
+  * [Prefix Sums and Their Applications](material/week1/prefix-sums-and-their-applications.pdf)
+
+  * [A Provable Time and Space Efficient Implementation of NESL](material/week1/a-provable-time-and-space-efficient-implementation-of-nesl.pdf)
+
+* **Lab**: Assignment 1 handout.
 
 ## Weekly assignments
 

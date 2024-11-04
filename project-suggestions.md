@@ -41,32 +41,3 @@ computational geometry:
 * [delaunayRefine](https://cmuparlay.github.io/pbbsbench/benchmarks/delaunayRefine.html)
 * [delaunayTriangulation](https://cmuparlay.github.io/pbbsbench/benchmarks/delaunayTriangulation.html)
 * [rangeQuery2d](https://cmuparlay.github.io/pbbsbench/benchmarks/rangeQuery2d.html)
-
-## Engineering Parallel Semisort
-
-The paper [High-Performance and Flexible Parallel Algorithms for
-Semisort and Related
-Problems](https://dl.acm.org/doi/pdf/10.1145/3558481.3591071)
-describes an algorithm for *semisorting*, where elements of a sequence
-with the same *key* are made contiguous, but no ordering is given
-between elements of different keys.  E.g. for an input
-
-```
-[1, 3, 2, 0, 3, 3, 3, 3, 0, 2]
-```
-
-the following might be the result of semisorting
-
-```
-[1, 3, 3, 3, 3, 3, 0, 0, 2, 2]
-[2, 2, 1, 3, 3, 3, 3, 3, 0, 0]
-...
-```
-
-Semisorting is a useful primitive in various parallel algorithms.
-While the paper listed above describes the algorithm in a fork-join
-manner, Troels finds the explanation both beautiful and simple, *and*
-probably not too difficult to adapt to a data parallel setting. This
-project is about implementing the semisort algorithm in Futhark or
-ISPC (or some other data parallel languages) and evaluating the
-performance.

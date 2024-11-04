@@ -56,9 +56,11 @@ up to the lab sessions.
 
 * **Theme**: Intro, deterministic parallelism, data parallelism, Futhark.
 
-* **Material**: [Parallel Programming in Futhark](https://futhark-book.readthedocs.io/en/latest/)
+* **Material**:
 
-* **Lab**: [Futhark exercises](bootstrap-exercises.md).
+  * [Parallel Programming in Futhark](https://futhark-book.readthedocs.io/en/latest/)
+
+  * [Futhark exercises](bootstrap-exercises.md)
 
 ##### Wednesday
 
@@ -72,7 +74,25 @@ up to the lab sessions.
 
   * [A Provable Time and Space Efficient Implementation of NESL](material/week1/a-provable-time-and-space-efficient-implementation-of-nesl.pdf)
 
-* **Lab**: Assignment 1 handout.
+#### Week 2
+
+##### Monday
+
+* **Theme**: Vector programming with ISPC
+
+* **Material**:
+
+  * [ispc: A SPMD Compiler for High-Performance CPU Programming](material/week2/ispc_inpar_2012.pdf)
+
+##### Wednesday
+
+* **Theme**: Pointer structures in a data parallel setting.
+
+* **Material**:
+
+  * [The Complexity of Parallel Computations](material/week2/wyllie.pdf) (section 4.1.2)
+
+  * [Aaron Hsu's PhD dissertation](material/hsu_dissertation.pdf) (sections 3.2 and 3.3, but the lecture slides should be enough)
 
 ## Weekly assignments
 

@@ -92,7 +92,7 @@ up to the lab sessions.
 
   * [The Complexity of Parallel Computations](material/week2/wyllie.pdf) (section 4.1.2)
 
-  * [Aaron Hsu's PhD dissertation](material/hsu_dissertation.pdf) (sections 3.2 and 3.3, but the lecture slides should be enough)
+  * [Aaron Hsu's PhD dissertation](material/week2/hsu_dissertation.pdf) (sections 3.2 and 3.3, but the lecture slides should be enough)
 
 ## Weekly assignments
 

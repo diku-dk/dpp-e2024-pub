@@ -21,8 +21,10 @@ is a variety of built in number types.  Whenever you are operating on
 numbers, you must be consistent about which types you are using.  Some
 of the most common types are:
 
+* `bool`: boolean.
 * `i32`: 32-bit integer.
-* `f32`: 32-bit floating-point unit.
+* `f32`: 32-bit floating-point number.
+* `f64`: 64-bit floating-point number.
 
 Types must be compatible.  You cannot add a number of `i32` to a
 number of type `f32`.  In such cases you have to convert the types of

@@ -1,14 +1,20 @@
-# Data Parallel Programming (DPP), Block 2 2024
+# Syllabus and Material for Data Parallel Programming (DPP)
+
+Welcome to the course website for DPP! All material and general
+information will be provided here. Announcements, assignment handin,
+and the discussion forum remains on Absalon. While this website is a
+Git repository, you are not required or expected to use Git to
+interact with it, but feel free to do so if convenient for you.
 
 ## Course Structure
 
 <img align="right" width="300" src="https://github.com/user-attachments/assets/d377dc77-3495-4b40-9464-d314b0fee8e2">
 
-DPP is structured around five weeks with lectures and lab sessions
-on Monday and Wednesday, followed by a final project to be
-presented orally at the exam.  Throughout the course, you will hand in
-four weekly assignments.  These *weeklies* count for 40\% of the
-grade, while the exam counts for 60\%.
+DPP is structured around five weeks with lectures and lab sessions on
+Monday and Wednesday, followed by a final project to be presented
+orally at the exam. Throughout the course, you will hand in four
+weekly assignments. The assignments count for 40\% of the grade, while
+the exam counts for 60\%.
 
 The teachers are **Cosmin Oancea** and **Troels Henriksen**.
 

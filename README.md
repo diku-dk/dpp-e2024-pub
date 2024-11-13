@@ -23,9 +23,8 @@ assignments and projects will be posted in English, and while you can
 chose to hand in solutions in either English or Danish, English is
 preferred.
 
-All course material is distributed via this GitHub page.  Assignment
-handin is still on Absalon.  There is no mandated textbook for the
-course - you will be assigned reading material from papers and such.
+There is no mandated textbook for the course - you will be assigned
+reading material from papers and such.
 
 ## Course schedule
 

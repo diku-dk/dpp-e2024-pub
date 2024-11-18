@@ -70,7 +70,10 @@ up to the lab sessions.
 
 * **Material**:
 
-  * [Parallel Programming in Futhark](https://futhark-book.readthedocs.io/en/latest/)
+  * [Parallel Programming in
+    Futhark](https://futhark-book.readthedocs.io/en/latest/)
+    (particularly [Practical
+    Matters](https://futhark-book.readthedocs.io/en/latest/practical-matters.html))
 
   * [Futhark exercises](bootstrap-exercises.md)
 

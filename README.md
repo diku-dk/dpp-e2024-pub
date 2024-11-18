@@ -230,6 +230,22 @@ $ module load ispc
 (Although there is no reason to use Hendrix for ISPC - it will run
 fine on your machine.)
 
+#### Access to Futhark machines
+
+The Futhark machines (`hendrixfut01fl`, `hendrixfut02fl`, `hendrixfut03fl`)
+have been temporarily detached from the hendrix cluster.  If you do not have
+accounts on them and would like to work on them, please contact the teachers
+during class or e-mail them.
+
+The available machines are equipped with top-end GPUs---Nvidia A100 GPUs on
+`hendrixfut01/3fl` and MI100 AMD GPU on `hendrixfut02fl`---and two AMD EPYC 7352
+24-Core CPUs (total 96 hardware threads). Please note that on `hendrixfut02fl` you
+cannot use the cuda backend of Futhark (since it has an AMD GPU) but you may
+use the OpenCL backend.
+
+To access them you need to be under VPN; if so then you can directly `ssh` to them
+with your ku-id and associated password. 
+
 ## Other resources
 
 You are not expected to read/watch the following unless otherwise

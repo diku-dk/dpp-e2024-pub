@@ -26,6 +26,13 @@ preferred.
 There is no mandated textbook for the course - you will be assigned
 reading material from papers and such.
 
+We have also begun work on some [DPP course
+  notes](https://github.com/diku-dk/dpp-notes)
+  [PDF](https://github.com/diku-dk/dpp-notes/releases/download/latest/dpp-notes.pdf),
+  although they are currently quite embryonic, and it is not certain
+  we will have time to add much content this year. Please let us know
+  if there is anything in particular you would like to see.
+
 ## Course schedule
 
 [Course Catalog Web Page](https://kurser.ku.dk/course/ndak21006u/2024-2025)

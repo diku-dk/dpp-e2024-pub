@@ -93,14 +93,6 @@ up to the lab sessions.
 
 ##### Monday
 
-* **Theme**: Vector programming with ISPC
-
-* **Material**:
-
-  * [ispc: A SPMD Compiler for High-Performance CPU Programming](material/week2/ispc_inpar_2012.pdf)
-
-##### Wednesday
-
 * **Theme**: Pointer structures in a data parallel setting.
 
 * **Material**:
@@ -108,6 +100,15 @@ up to the lab sessions.
   * [The Complexity of Parallel Computations](material/week2/wyllie.pdf) (section 4.1.2)
 
   * [Aaron Hsu's PhD dissertation](material/week2/hsu_dissertation.pdf) (sections 3.2 and 3.3, but the lecture slides should be enough)
+
+##### Wednesday
+
+* **Theme**: Data-parallel expansion and input processing.
+
+* **Material**:
+
+  * [Data-Parallel Flattening by Expansion](material/week2/expansion.pdf)
+
 
 ## Weekly assignments
 

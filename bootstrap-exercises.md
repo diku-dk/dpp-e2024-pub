@@ -17,7 +17,7 @@ Implement the following Futhark utility functions:
 
 ```
 def rotate [n] 't (r: i64) (xs: [n]t) : [n]t =
-  ...
+  
 
 def transpose [n] [m] 't (xss: [n][m]t) : [m][n]t =
   ...

@@ -93,7 +93,7 @@ up to the lab sessions.
 
 ##### Monday
 
-* **Theme**: Vector programming with ISPC
+* **Theme**: [Vector programming with ISPC](slides/L3-ispc.pdf)
 
 * **Material**:
 

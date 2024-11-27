@@ -101,7 +101,7 @@ up to the lab sessions.
 
 ##### Wednesday
 
-* **Theme**: Pointer structures in a data parallel setting.
+* **Theme**: [Pointer structures in a data parallel setting](slides/L4-pointer-structures.pdf)
 
 * **Material**:
 

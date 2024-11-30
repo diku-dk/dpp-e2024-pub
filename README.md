@@ -109,6 +109,30 @@ up to the lab sessions.
 
   * [Aaron Hsu's PhD dissertation](material/week2/hsu_dissertation.pdf) (sections 3.2 and 3.3, but the lecture slides should be enough)
 
+#### Week 3
+
+##### Monday
+
+* **Theme**: [Part I: Flattening Nested and Irregular Parallelism](slides/L5and6-irreg-flattening.pdf)
+
+* **Demo Code**
+
+  * [Lecture's Running Example](material/week3/demo-code/lecture-eg)
+
+* **Facultative Material**:
+
+  * [Various papers related to SCAN and flattening, but which are not very accessible to students](material/week3/papers)
+
+  * [PMPH Lecture Notes, chapter 4](http://hjemmesider.diku.dk/~zgh600/Publications/lecture-notes-pmph.pdf)
+
+##### Wednesday
+
+* **Theme**: [Part II: Flattening Nested and Irregular Parallelism](slides/L5and6-irreg-flattening.pdf)
+
+* **Facultative Material**:
+
+  * same as above
+
 ## Weekly assignments
 
 <img align="right" width="300" src="https://github.com/user-attachments/assets/720668fd-cde1-4000-8729-72771f5b09b9">

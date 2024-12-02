@@ -66,17 +66,20 @@ up to the lab sessions.
 
 ##### Monday
 
-* **Theme**: Intro, deterministic parallelism, data parallelism, Futhark.
+* **Theme**: [Intro, deterministic parallelism, data parallelism, Futhark.](slides/L1-determ-prog.pdf)
 
 * **Material**:
 
-  * [Parallel Programming in Futhark](https://futhark-book.readthedocs.io/en/latest/)
+  * [Parallel Programming in
+    Futhark](https://futhark-book.readthedocs.io/en/latest/)
+    (particularly [Practical
+    Matters](https://futhark-book.readthedocs.io/en/latest/practical-matters.html))
 
   * [Futhark exercises](bootstrap-exercises.md)
 
 ##### Wednesday
 
-* **Theme**: Cost models, advanced Futhark.
+* **Theme**: [Cost models, advanced Futhark.](slides/L2-advanced-futhark-cost-models.pdf)
 
 * **Material**:
 
@@ -90,7 +93,7 @@ up to the lab sessions.
 
 ##### Monday
 
-* **Theme**: Vector programming with ISPC
+* **Theme**: [Vector programming with ISPC](slides/L3-ispc.pdf)
 
 * **Material**:
 
@@ -98,13 +101,37 @@ up to the lab sessions.
 
 ##### Wednesday
 
-* **Theme**: Pointer structures in a data parallel setting.
+* **Theme**: [Pointer structures in a data parallel setting](slides/L4-pointer-structures.pdf)
 
 * **Material**:
 
   * [The Complexity of Parallel Computations](material/week2/wyllie.pdf) (section 4.1.2)
 
   * [Aaron Hsu's PhD dissertation](material/week2/hsu_dissertation.pdf) (sections 3.2 and 3.3, but the lecture slides should be enough)
+
+#### Week 3
+
+##### Monday
+
+* **Theme**: [Part I: Flattening Nested and Irregular Parallelism](slides/L5and6-irreg-flattening.pdf)
+
+* **Demo Code**
+
+  * [Lecture's Running Example](material/week3/demo-code/lecture-eg)
+
+* **Facultative Material**:
+
+  * [Various papers related to SCAN and flattening, but which are not very accessible to students](material/week3/papers)
+
+  * [PMPH Lecture Notes, chapter 4](http://hjemmesider.diku.dk/~zgh600/Publications/lecture-notes-pmph.pdf)
+
+##### Wednesday
+
+* **Theme**: [Part II: Flattening Nested and Irregular Parallelism](slides/L5and6-irreg-flattening.pdf)
+
+* **Facultative Material**:
+
+  * same as above
 
 ## Weekly assignments
 

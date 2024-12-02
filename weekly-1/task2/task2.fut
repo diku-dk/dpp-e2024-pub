@@ -1,5 +1,5 @@
 -- ==
--- entry: main
+-- entry: hillis_steele_test
 -- input {[1i32, 2i32, 3i32, 4i32]}
 -- output {[1i32, 3i32, 6i32, 10i32]}
 -- input {[3i32, 4i32, 8i32, 2i32, 4i32, 3i32, 7i32, 10i32]}
@@ -8,6 +8,7 @@
 -- compiled random input { [1000000]i32 }
 -- compiled random input { [10000000]i32 }
 -- compiled random input { [100000000]i32 }
+-- compiled random input { [1000000000]i32 }
 
 -- ==
 -- entry: test_work_efficient
@@ -19,9 +20,10 @@
 -- compiled random input { [1000000]i32 }
 -- compiled random input { [10000000]i32 }
 -- compiled random input { [100000000]i32 }
+-- compiled random input { [1000000000]i32 }
 
 -- ==
--- entry: default
+-- entry: built_int_scan
 -- input {[1i32, 2i32, 3i32, 4i32]}
 -- output {[1i32, 3i32, 6i32, 10i32]}
 -- input {[3i32, 4i32, 8i32, 2i32, 4i32, 3i32, 7i32, 10i32]}
@@ -30,6 +32,7 @@
 -- compiled random input { [1000000]i32 }
 -- compiled random input { [10000000]i32 }
 -- compiled random input { [100000000]i32 }
+-- compiled random input { [1000000000]i32 }
 
 def ilog2 (x: i64) = 63 - i64.i32 (i64.clz x)
 
@@ -44,10 +47,9 @@ def work_efficient [n] (xs: [n]i32) : [n]i32 =
     let upswept = 
         loop xs = copy xs for d in (((iota m)[::-1]) :> [m]i64) do
             let stride = 1 << (m-d)
-            let offset = 1 << (m-d-1)
-            let numberofindices = 1 << d
+            let offset = stride >> 1
             let indices = 
-                map (\i -> (i+1) * stride - 1) (iota numberofindices)
+                map (\i -> (i+1) * stride - 1) (iota (1 << d))
             let values = 
                 map (\i -> xs[i] + xs[i-offset]) indices
             in scatter xs indices values
@@ -56,27 +58,24 @@ def work_efficient [n] (xs: [n]i32) : [n]i32 =
     let downswept =
         loop xs = upswept for d in (iota m) do
             let stride = 1 << (m-d)
-            let offset = 1 << (m-d-1)
-            let numberofindices = 1 << d
-            let indices1 = 
-                map (\i -> (i+1) * stride - 1) (iota numberofindices)
-            let values1 = 
-                map (\i -> xs[i] + xs[i-offset]) indices1
-
-            let indices2 =
-                map (\i -> i-offset) (indices1)
-            let values2 = 
-                map (\i -> xs[i+offset]) indices2
+            let offset = stride >> 1
+            let indices = 
+                map (\i -> (i+1) * stride - 1) (iota (1 << d))
+            let values = 
+                map (\i -> xs[i] + xs[i-offset]) indices
                 
-            let newxs = scatter xs indices1 values1
-            in scatter newxs indices2 values2
+            let values2 = 
+                map (\i -> xs[i]) indices
+                
+            let newxs = scatter xs indices values
+            in scatter newxs (map (\i -> i-offset) (indices)) values2
     in downswept
 
 entry test_work_efficient [n] ( xs: [n]i32 ) : [n]i32 =
     work_efficient xs
 
-entry main [n] ( xs: [n]i32 ) : [n]i32 =
+entry hillis_steele_test [n] ( xs: [n]i32 ) : [n]i32 =
     hillis_steele xs
 
-entry default [n] ( xs: [n]i32 ) : [n]i32 =
+entry built_int_scan [n] ( xs: [n]i32 ) : [n]i32 =
     scan (+) 0i32 xs

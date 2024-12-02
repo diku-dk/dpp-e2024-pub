@@ -25,17 +25,35 @@ module rand_i8 = uniform_int_distribution i8 rng_engine
 -- https://futhark-lang.org/pkgs/github.com/diku-dk/cpprandom/latest/
 
 def rand = rand_f32.rand (0f32, 1f32)
+def randi = rand_i8.rand (0i8, 1i8)
 
 -- Create a new grid of a given size.  Also produce an identically
 -- sized array of RNG states.
 def random_grid (seed: i32) (h: i64) (w: i64)
               : ([h][w]rng_engine.rng, [h][w]spin) =
-  ???
+  let l = iota (h*w)
 
+  let r_seed = rng_engine.rng_from_seed [seed]
+  let rngs = rng_engine.split_rng (h*w) r_seed
+
+  let init = map2 (\_ r -> 
+                    let x = randi r
+                    in
+                    if x.1 == 0 
+                      then (x.0, -1)
+                    else (x.0, 1)
+                    ) l rngs
+  let (new_rngs, spins) = (map (\x -> x.0) init, map (\x -> x.1) init)       
+  in (unflatten new_rngs, unflatten spins)
 -- Compute $\Delta_e$ for each spin in the grid, using wraparound at
 -- the edges.
 def deltas [h][w] (spins: [h][w]spin): [h][w]i8 =
-  ???
+  let flattened_spins = spins |> flatten
+  let left_spins = map (\a -> rotate (-1) a) spins |> flatten
+  let right_spins = map (\a -> rotate 1 a) spins |> flatten
+  let up_spins = rotate 1 spins |> flatten
+  let down_spins = rotate (-1) spins |> flatten
+  in map5 (\c u d l r -> 2*c*(u+d+l+r)) flattened_spins up_spins down_spins left_spins right_spins |> unflatten
 
 -- The sum of all deltas of a grid.  The result is a measure of how
 -- ordered the grid is.
@@ -46,7 +64,20 @@ def delta_sum [h][w] (spins: [w][h]spin): i32 =
 def step [h][w] (abs_temp: f32) (samplerate: f32)
                 (rngs: [h][w]rng_engine.rng) (spins: [h][w]spin)
               : ([h][w]rng_engine.rng, [h][w]spin) =
-  ???
+  let flattened_spins = flatten spins
+  let flattened_deltas = map (\d -> f32.i8 d) (flatten (deltas spins))
+  
+  let a_b_r = map (\r -> 
+                    let (r2, a) = rand r
+                    let (r3, b) = rand r2
+                    in ((a,b),r3)
+                  ) (flatten rngs)
+
+  let new_rngs = map (\t -> t.1) a_b_r
+  let new_spins = map3 (\s abr d -> if ((abr.0).0 < samplerate && (d < (-d) || (abr.0).1 < f32.exp((-d)/abs_temp)))
+                                    then (-s) else s)
+                                    flattened_spins a_b_r flattened_deltas |> unflatten 
+  in (unflatten new_rngs, new_spins)
 
 -- | Just for benchmarking.
 def main (abs_temp: f32) (samplerate: f32)
@@ -57,6 +88,17 @@ def main (abs_temp: f32) (samplerate: f32)
 -- ==
 -- entry: main
 -- input { 0.5f32 0.1f32 10i64 10i64 2 } auto output
+-- input { 0.5f32 0.1f32 10i64 10i64 1000 } auto output
+-- input { 0.5f32 0.1f32 10i64 10i64 10000 } auto output
+-- input { 0.5f32 0.1f32 10i64 10i64 100000 } auto output
+-- input { 0.5f32 0.1f32 100i64 100i64 100000 } auto output
+-- input { 1.0f32 0.1f32 10i64 10i64 1000 } auto output
+-- input { 0.5f32 0.5f32 10i64 10i64 1000 } auto output
+-- input { 0.5f32 0.7f32 10i64 10i64 1000 } auto output
+-- input { 0.5f32 0.1f32 20i64 10i64 1000 } auto output
+-- input { 0.5f32 0.1f32 20i64 20i64 1000 } auto output
+-- input { 0.5f32 0.1f32 100i64 10i64 1000 } auto output
+-- input { 0.5f32 0.1f32 10i64 100i64 1000 } auto output
 
 -- The following definitions are for the visualisation and need not be modified.
 

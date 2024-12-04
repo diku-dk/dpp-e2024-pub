@@ -21,5 +21,5 @@ datasets:
 	echo "2048i64 2048i64 2048i64" | ./mk-datasets -e mkReplicate2 -b > data/rep2048x2048-2048.out
 
 clean:
-	rm -rf *.c primes-par primes-seq flat-optim util
+	rm -rf *.c spmat-vec-mul spmat-mat-mul mk-datasets
 	rm -rf *.actual *.expected

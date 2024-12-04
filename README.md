@@ -117,7 +117,7 @@ up to the lab sessions.
 
 * **Demo Code**
 
-  * [Lecture's Running Example](material/week3/demo-code/lecture-eg)
+  * [Lecture's Running Example](material/week3/demo-code/optimize-by-II1)
 
 * **Facultative Material**:
 
@@ -128,6 +128,10 @@ up to the lab sessions.
 ##### Wednesday
 
 * **Theme**: [Part II: Flattening Nested and Irregular Parallelism](slides/L5and6-irreg-flattening.pdf)
+
+* **Demo Code**
+
+  * [``To flatten or not To flatten, that is the question'': Matrix Multiplication Demo](material/week3/demo-code/to-flat-or-not-to-flat/mmm)
 
 * **Facultative Material**:
 

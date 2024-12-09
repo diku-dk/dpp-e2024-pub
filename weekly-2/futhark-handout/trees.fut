@@ -98,11 +98,6 @@ module input: {
     |> map (\(i,(x,_)) -> to_step s[i-x+1:i+1])
 }
 
-def exscan f ne xs =
-  map2 (\i x -> if i == 0 then ne else x)
-       (indices xs)
-       (rotate (-1) (scan f ne xs))
-
 def map_step_to_tuple (steps: []step) : [](i64,i32) =
   map (\s -> 
     match s
@@ -136,19 +131,19 @@ entry parents_test (D: []i64) : []i64 =
 
 -- ## Task 2.3
 def subtree_sizes [n] (steps: [n]step) : []i32 =
-  let depths' = depths steps
-  let l = length depths'
-  let (_, values) = unzip depths'
+  let all_depths = depths steps
+  let l = length all_depths
+  let (_, values) = unzip all_depths
   in
   map2 (
     \d i ->
       if i == 0 then
         reduce (+) 0 values
       else
-        let (_, accumulated_res) = loop (j, acc) = (i, 0) while j < l && d.0 < depths'[j].0 || i == j do
-          (j + 1, acc + depths'[j].1)
+        let (_, accumulated_res) = loop (j, acc) = (i, 0) while j < l && d.0 < all_depths[j].0 || i == j do
+          (j + 1, acc + all_depths[j].1)
         in accumulated_res
-    ) depths' (indices depths')
+    ) all_depths (indices all_depths)
   
 entry subtree_sizes_test (chars : string []) :  []i32 =
   subtree_sizes (input.steps chars)

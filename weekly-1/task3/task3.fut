@@ -1,22 +1,5 @@
 import "lib/github.com/diku-dk/sorts/radix_sort"
 -- ==
--- entry: segscan_test
--- input {
---          [1i32, 2i32, 3i32, 4i32, 1i32, 2i32, 3i32, 4i32]
---          [true, false, false, false, true, false, false, false]
---       }
--- output {[1i32, 3i32, 6i32, 10i32, 1i32, 3i32, 6i32, 10i32]}
--- input {
---          [1i32, 2i32, 3i32, 4i32, 1i32, 2i32, 3i32, 4i32]
---          [true, true, false, true, false, true, false, true]
---       }
--- output {[1i32, 2i32, 5i32, 4i32, 5i32, 2i32, 5i32, 4i32]}
--- compiled random input { [100000]i32 [100000]bool}
--- compiled random input { [1000000]i32 [1000000]bool}
--- compiled random input { [10000000]i32 [10000000]bool}
--- compiled random input { [100000000]i32 [100000000]bool}
-
--- ==
 -- entry: scan_test
 -- compiled random input { [100000]i32}
 -- compiled random input { [1000000]i32 }
@@ -35,6 +18,27 @@ import "lib/github.com/diku-dk/sorts/radix_sort"
 --          [true, true, false, true, false, true, false, true]
 --       }
 -- output {[1i32, 5i32, 5i32, 5i32, 4i32]}
+-- input {
+--  [1i32, 2i32, 3i32, 4i32, 1i32, 2i32, 3i32, 4i32]
+--  [true, true, true, true, true, true, true, true]
+-- }
+-- output {[1i32, 2i32, 3i32, 4i32, 1i32, 2i32, 3i32, 4i32]}
+-- input {
+--  [1i32, 2i32, 3i32, 4i32, 1i32, 2i32, 3i32, 4i32]
+--  [true, false, true, false, true, false, true, false]
+-- }
+-- output {[3i32, 7i32, 3i32, 7i32]}
+-- input {
+--  [1i32, 2i32, 3i32, 4i32, 1i32, 2i32, 3i32, 4i32, 1i32]
+--  [true, false, false, true, false, false, true, false, false]
+-- }
+-- output {[6i32, 7i32, 8i32]}
+-- input {
+--  [1i32, 2i32, 3i32, 4i32, 1i32, 2i32, 3i32, 4i32, 1i32]
+--  [true, false, false, false, false, false, false, false, false]
+-- }
+-- output {[21i32]}
+
 -- compiled random input { [100000]i32 [100000]bool}
 -- compiled random input { [1000000]i32 [1000000]bool}
 -- compiled random input { [10000000]i32 [10000000]bool}
@@ -67,6 +71,30 @@ import "lib/github.com/diku-dk/sorts/radix_sort"
 --          [10i32, 12i32, 1i32, 2i32, 2i32, 2i32]
 --       }
 -- output {[10i32, 15i32, 1i32, 4i32]}
+-- input {
+--          [0i32,0i32,0i32,0i32]
+--          [0i64,0i64,0i64,0i64,0i64, 0i64]
+--          [10i32, 12i32, 1i32, 2i32, 2i32, 2i32]
+--       }
+-- output {[29i32, 0i32, 0i32, 0i32]}
+-- input {
+--          [10i32,10i32,10i32,10i32]
+--          [0i64,0i64,0i64,0i64,0i64, 0i64]
+--          [10i32, 12i32, 1i32, 2i32, 2i32, 2i32]
+--       }
+-- output {[39i32, 10i32, 10i32, 10i32]}
+-- input {
+--          [0i32,0i32,0i32,0i32,0i32,0i32]
+--          [0i64,1i64,2i64,3i64,4i64,5i64]
+--          [1i32, 2i32, 3i32, 4i32, 5i32, 6i32]
+--       }
+-- output {[1i32, 2i32, 3i32, 4i32, 5i32, 6i32]}
+-- input {
+--          [0i32,0i32,0i32,0i32,0i32,0i32]
+--          [0i64,0i64,2i64,2i64,4i64,4i64]
+--          [1i32, 2i32, 3i32, 4i32, 5i32, 6i32]
+--       }
+-- output {[3i32, 0i32, 7i32, 0i32, 11i32, 0i32]}
 -- compiled random input { [100000]i32 [100000]i64 [100000]i32}
 -- compiled random input { [1000000]i32 [1000000]i64 [1000000]i32}
 -- compiled random input { [10000000]i32 [10000000]i64 [10000000]i32}

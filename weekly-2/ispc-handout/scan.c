@@ -39,8 +39,12 @@ int main() {
   for (int i = 0; i < n; i++) {
     // If necessary, fiddle with the tolerance here (recall that
     // floating-point addition is not actually associative).
-    if (fabsf(1 - c_output[i] / ispc_output[i]) > 1.001) {
-      fprintf(stderr, "Results differ at [%d]: %f != %f\n", i, c_output[i], ispc_output[i]);
+    const float tolerance = 0.0001;
+    float abs_rel_diff = fabsf((c_output[i] - ispc_output[i]) / c_output[i]);
+    if (abs_rel_diff > tolerance) {
+      fprintf(stderr, "Results differ at index %d with tolerance = %f: "
+                      "(expected, actual) = (%f, %f).\n",
+          i, tolerance, c_output[i], ispc_output[i]);
       return 1;
     }
   }

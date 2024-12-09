@@ -137,6 +137,31 @@ up to the lab sessions.
 
   * same as above
 
+#### Week 3
+
+##### Monday
+
+* **Theme**: [Part I: Automatic Differentiation](slides/L7and8-AD.pdf)
+
+* **Facultative Material** consists of several papers:
+
+  * ["Automatic Differentiation in Machine Learning: a Survey"](https://www.jmlr.org/papers/volume18/17-468/17-468.pdf) (generic)
+  
+  * ["AD for an Array Language with Nested Parallelism"](https://futhark-lang.org/publications/sc22-ad.pdf) (Futhark)
+  
+  * ["Reverse-Mode AD of Multi-Reduce and Scan in Futhark"](https://futhark-lang.org/publications/ifl23-ad.pdf) (Futhark)
+
+  * ["Parallelism-Preserving Automatic Differentiation for Second-Order Array Languages"](https://dl.acm.org/doi/pdf/10.1145/3471873.3472975)
+
+##### Wednesday
+
+* **Theme**: [Part II: Automatic Differentiation](slides/L7and8-AD.pdf)
+
+
+* **Facultative Material**:
+
+  * same as above
+
 ## Weekly assignments
 
 <img align="right" width="300" src="https://github.com/user-attachments/assets/720668fd-cde1-4000-8729-72771f5b09b9">

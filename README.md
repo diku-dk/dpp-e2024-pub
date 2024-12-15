@@ -137,7 +137,7 @@ up to the lab sessions.
 
   * same as above
 
-#### Week 3
+#### Week 4
 
 ##### Monday
 
@@ -157,10 +157,23 @@ up to the lab sessions.
 
 * **Theme**: [Part II: Automatic Differentiation](slides/L7and8-AD.pdf)
 
-
 * **Facultative Material**:
 
   * same as above
+
+#### Week 5
+
+##### Monday
+
+* **Theme**: Moderate and Incremental Flattening
+
+* **Material:**
+
+  * [Futhark: Purely Functional GPU-Programming with Nested Parallelism and In-Place Array Updates](https://futhark-lang.org/publications/pldi17.pdf)
+  * [Incremental Flattening for Nested Data Parallelism](https://futhark-lang.org/publications/ppopp19.pdf)
+  * **Optional**: [Dataset Sensitive Autotuning of Multi-Versioned Code based on Monotonic Properties](https://futhark-lang.org/publications/tfp21.pdf)
+
+##### Thursday
 
 ## Weekly assignments
 

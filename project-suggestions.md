@@ -71,3 +71,7 @@ information (inside).
 Bonus: if time permits, you may try to optimize the computation, e.g.,
 by packing in a safe way several unit vectors into a denser
 representation that contains several one entries.
+
+## Batched Rank-k Search
+
+For those that have not chosen this problem in the PMPH course, you are welcome to solve [the rank-k search problem](material-projects/rank-search-k/Project-RankSearch-k.pdf).

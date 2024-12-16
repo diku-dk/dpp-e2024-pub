@@ -165,7 +165,7 @@ up to the lab sessions.
 
 ##### Monday
 
-* **Theme**: Moderate and Incremental Flattening
+* **Theme**: [Moderate and Incremental Flattening](slides/L9-regular-flattening.pdf)
 
 * **Material:**
 

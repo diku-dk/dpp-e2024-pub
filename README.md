@@ -179,11 +179,11 @@ up to the lab sessions.
 
 * **Demo Code**
 
-  * You will need the `islpy` python module (`pip install islpy`)
+  * You will need the `islpy` python module (`$ pip install islpy`)
   
   * [Several solved examples](material/week5/demo-poly/)
   
-  * [Several facultative exercises mentioned in the last section of the slides)](material/week5/exercise-poly/)
+  * [Several facultative exercises mentioned in the last section of the slides](material/week5/exercise-poly/)
 
 * **Facultative Material**:
 

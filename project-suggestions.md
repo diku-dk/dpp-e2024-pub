@@ -108,3 +108,15 @@ Futhark-related projects later in their studies.
 ## Batched Rank-k Search
 
 For those that have not chosen this problem in the PMPH course, you are welcome to solve [the rank-k search problem](material-projects/rank-search-k/Project-RankSearch-k.pdf).
+
+## Reverse-AD Improvements applied to the Futhark Compiler
+
+This project refers to implementing the reverse-AD differentiation of scans by means of the rule presented in the PPAD paper [1], for the cases when the scan operator is defined on scalar tuples of arity at least two. 
+
+Furthermore, as you have probably observed in the solutions to your weekly-4, there is some overhead associated to the reverse-AD imlementation of reduce-by-index with multiplication as operator. You can try to eliminate the observed overhead as well.
+
+*If time permits*, you may study as well a solution for enabling Futhark to take advantage of invertible operators, e.g., efficiently supporting the case of reduce or reduce-by-index with the sum-of-product operator. In principle this can be accomplished by using attributes to annotate the source call to a reduce or reduce-by-index/hist with the names of the meta functions required by the translation (such as the forward/backward conversions, lifted and invertible operator, etc.). Once you can identify the meta functions, it is relatively straightforward to generate the efficient code.
+
+The Futhark compiler code that is relevant to this project is rooted in file `/futhark/src/Futhark/AD/Rev/SOAC.hs`; from there you may follow the different instances of second-order array combinators (SOACs), for example the reverse-AD treatment of `scan` in `Scan.hs` or of `reduce` in `Reduce.hs` or of `reduce-by-index` in `Hist.hs`.
+
+[1] A. Paszke, M. J. Johnson, R. Frostig, and D. Maclaurin, "Parallelism-Preserving Automatic Differentiation for Second-Order Array Languages", FHPNC, 2021.

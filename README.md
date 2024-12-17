@@ -173,7 +173,24 @@ up to the lab sessions.
   * [Incremental Flattening for Nested Data Parallelism](https://futhark-lang.org/publications/ppopp19.pdf)
   * **Optional**: [Dataset Sensitive Autotuning of Multi-Versioned Code based on Monotonic Properties](https://futhark-lang.org/publications/tfp21.pdf)
 
-##### Thursday
+##### Wednesday
+
+* **Theme**: [Introduction to Polyhedral Analysis](slides/L10-polyhedral.pdf)
+
+* **Demo Code**
+
+  * You will need the `islpy` python module (`pip install islpy`)
+  
+  * [Several solved examples](material/week5/demo-poly/)
+  
+  * [Several facultative exercises mentioned in the last section of the slides)](material/week5/exercise-poly/)
+
+* **Facultative Material**:
+
+  * [Chapter 5 of PMPH Lecture Notes, entitled "Loop-based data-dependence analysis and applications" introduces a simpler analysis based on direction vectors ](http://hjemmesider.diku.dk/~zgh600/Publications/lecture-notes-pmph.pdf)
+
+  * [Presentations, tutorial and paper related to polyhedral analysis, whose internet references were linked from the slides as well](material/week5/poly-papers-pres)
+
 
 ## Weekly assignments
 
